@@ -72,10 +72,10 @@ jobs:
         - uses: docker/login-action@v4
           with:
             registry: ghcr.io
-            username: ${{ github.actor }}
-            password: ${{ secrets.GITHUB_TOKEN }}
+            username: safayetneyam
+            password: ${{ secrets.MY_PAT }}
         - uses: docker/build-push-action@v4
           with: 
             context: .
             push: true
-            tags: ghcr.io/${{ github.actor }}/solar-system:${{ github.sha }} 
+            tags: ghcr.io/safayetneyam/solar-system:${{ github.sha }} 
