@@ -73,7 +73,7 @@ jobs:
           with:
             registry: ghcr.io
             username: safayetneyam
-            password: ${{ secrets.MY_PAT }}
+            password: ${{ secrets.GITHUB_TOKEN }}
         - uses: docker/build-push-action@v4
           with: 
             context: .
